@@ -21,13 +21,14 @@ const server =
 
           console.log("Look for query parameter data: " + search_params.get("data"))
           let Y=search_params.get("Y")
-
+          let X=search_params.get("X")
           let A=Math.ceil(Y)
+          let B=Math.ceil(X)
           // Process the queries here
           res.statusCode = 200      //code for OK
           res.setHeader('Content-Type', 'text/plain') 
           res.write("My Math Function is")
-          res.write(` ceil(${Y}) is ${A}`)
+          res.write(` ceil(${Y}) is ${A} and ceil(${X}) is ${B}`)
           res.end();
 
       } else {
